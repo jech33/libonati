@@ -1,0 +1,18 @@
+.container-home {
+    display: flex;
+    flex-direction: column;
+}
+
+.logoLibonati {
+    width: auto;
+    height: 40vh;
+    filter: invert(53%) sepia(95%) saturate(254%) hue-rotate(359deg) brightness(89%) contrast(90%);
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+    .logoLibonati {
+        width: 100vw;
+        height: 40vh;
+    }
+}

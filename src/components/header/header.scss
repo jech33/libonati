@@ -1,0 +1,38 @@
+@import "../../scss/variables.scss";
+
+nav {
+  position: sticky;
+  font-family: 'Montserrat' !important;
+  .navLink {
+    transition: all 0.3s ease;
+    font-weight: 600;
+    &:hover {
+      cursor: pointer;
+      color: $libonatiGold-20;
+    }
+  }
+
+  .menuIcon {
+    display: none;
+    color: $libonatiGold;
+  }
+  
+  .MuiButton-root {
+    padding: 0;
+    font-family: "Montserrat";
+    font-size: 16px;
+  }
+
+  .listItem {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .menuIcon {
+      display: block;
+    }
+    .navLink {
+      display: none;
+    }
+  }
+}
