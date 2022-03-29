@@ -1,5 +1,5 @@
-import languageEn from './dictionary/language_en';
-import languageEs from './dictionary/language_es';
+import languageEn from './dictionary/language_en.json';
+import languageEs from './dictionary/language_es.json';
 
 /**
  * Returns the dictionary structure according to the current language

@@ -1,18 +1,65 @@
+@import "../../scss/variables.scss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/scrollbar";
+
 .container-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+
+  .logoLibonati {
+    filter: invert(53%) sepia(95%) saturate(254%) hue-rotate(359deg)
+      brightness(89%) contrast(90%);
+  }
+
+  p {
+    font-family: "Barlow Condensed";
+    font-size: 1.25rem;
+  }
+
+  h1 {
+    // font-family: 'Macondo', cursive;
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-family: "Macondo", cursive;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-family: "Macondo", cursive;
+    font-size: 2rem;
+  }
+
+  .fitHeight {
     display: flex;
-    flex-direction: column;
-}
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+  }
 
-.logoLibonati {
-    width: auto;
-    height: 40vh;
-    filter: invert(53%) sepia(95%) saturate(254%) hue-rotate(359deg) brightness(89%) contrast(90%);
-    margin-top: 1rem;
-}
-
-@media screen and (max-width: 640px) {
-    .logoLibonati {
-        width: 100vw;
-        height: 40vh;
+  .sliderHome {
+    .swiper-scrollbar-drag {
+      background-color: rgba(138, 106, 55, 0.7);
     }
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: rgba(138, 106, 55);
+    }
+    .swiper-pagination-bullet, .swiper-pagination-bullet-active {
+      background-color: rgba(138, 106, 55);
+    }
+    .memberDescription {
+      font-family: "Macondo", cursive;
+      font-size: 1rem;
+    }
+  }
 }

@@ -1,6 +1,9 @@
-@import '../scss/variables.scss';
+@import "../scss/variables.scss";
+
+body {
+  background: linear-gradient(to right, black, $libonatiDarkBlack);
+}
 
 .layoutContainer {
-    height: auto;
-    background: linear-gradient(to right, black, $libonatiDarkBlack);
-  }
+  height: 100%;
+}

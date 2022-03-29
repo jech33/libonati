@@ -2,7 +2,10 @@
 
 nav {
   position: sticky;
-  font-family: 'Montserrat' !important;
+  top: 0;
+  z-index: 100;
+  font-family: "Montserrat" !important;
+  // background: linear-gradient(to right, black, $libonatiDarkBlack);
   .navLink {
     transition: all 0.3s ease;
     font-weight: 600;
@@ -16,7 +19,7 @@ nav {
     display: none;
     color: $libonatiGold;
   }
-  
+
   .MuiButton-root {
     padding: 0;
     font-family: "Montserrat";
