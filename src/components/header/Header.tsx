@@ -1,20 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Dropdown from './Dropdown';
+import MenuButton from './MenuButton';
 import './header.scss';
 import { getDictionary } from './utils/functions';
 
 const Header = () => {
   const srcLang:any = getDictionary('en');
+  const links = [
+    { id: 'home', to: '/', text: srcLang?.navBar.home },
+    { id: 'about', to: '/about', text: srcLang?.navBar.about },
+    { id: 'contact', to: '/contact', text: srcLang?.navBar.contact },
+  ];
+
   return (
     <nav className="flex align-middle">
       <ul className="container flex flex-wrap justify-end mx-auto navLinks">
-        <li className="navLink p-5"><Link to="/">{srcLang?.navBar.home}</Link></li>
-        <li className="navLink p-5"><Link to="/about">{srcLang?.navBar.about}</Link></li>
-        <li className="navLink p-5"><Link to="/contact">{srcLang?.navBar.contact}</Link></li>
+        {links.map((link) => (
+          <li className="navLink p-5"><Link to={link.to}>{link.text}</Link></li>
+        ))}
       </ul>
       <div className="menuIcon p-5">
-        <Dropdown />
+        <MenuButton navLinks={links} />
       </div>
     </nav>
   );

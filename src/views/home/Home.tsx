@@ -1,6 +1,6 @@
 import React from 'react';
 import LogoLibonati from '../../assets/LogoLibonati';
-import images from '../../assets/data.json';
+import images from '../../config/photos.json';
 import './home.scss';
 import SwiperHome from './helpers/SwiperHome';
 
@@ -14,12 +14,6 @@ const Home = () => {
       </div>
       <div className="h-screen" />
       <div className="mb-36 w-full text-libonatiGold z-10">
-        <div className="hidden lg:flex">
-          <div className="w-6/12" />
-          <div className="w-6/12 h-[0.25rem] pr-20">
-            <div className="bg-libonatiGold w-full h-full" />
-          </div>
-        </div>
         <div className="flex lg:hidden">
           <div className="w-3/12" />
           <div className="w-6/12 h-[0.25rem] -mt-12">
@@ -36,12 +30,12 @@ const Home = () => {
             <h1 className="text-center lg:text-left mb-10 lg:mb-0">
               THE BAND
             </h1>
-            <h2>
+            <h2 className="text-libonatiGrayYellow">
               Vestibulum in facilisis lectus. Praesent sit amet urna pulvinar,
               gravida magna commodo, molestie purus. Cras laoreet vitae risus vel...
             </h2>
             <br />
-            <p>
+            <p className="text-libonatiGrayYellow">
               Vestibulum in facilisis lectus. Praesent sit amet urna pulvinar,
               gravida magna commodo, molestie purus. Cras laoreet vitae risus vel
               laoreet. Suspendisse dignissim efficitur urna nec elementum. Duis
@@ -54,10 +48,13 @@ const Home = () => {
             </p>
           </div>
           <div className="sliderHome flex
-          w-full lg:w-6/12 max-h-screen min-h-[30rem]
-          lg:border-l-4 lg:border-libonatiGold"
+          w-full lg:w-6/12 h-screen md:h-full max-h-screen min-h-[30rem]
+          lg:border-l-4 lg:border-t-4 lg:border-libonatiGold"
           >
-            <div className="w-full md:pl-2 pt-2 flex sm:justify-items-center shadow-black shadow-lg">
+            <div className="w-full md:pl-2 md:pt-2 md:mb-2
+            flex sm:justify-items-center
+            shadow-gray shadow-xl"
+            >
               <SwiperHome id="Home" />
             </div>
           </div>
