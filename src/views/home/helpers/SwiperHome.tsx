@@ -36,8 +36,8 @@ const SwiperHome = ({ id }:{id:string}) => {
         loop
         navigation
         pagination={{ clickable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={(swiper) => console.log(swiper)}
+        // onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={(swiper) => console.log(swiper)}
       >
         { slidesCrew.map((crewMate) => (
           <SwiperSlide>
