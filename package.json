@@ -1,11 +1,11 @@
 {
-  "homepage": "https://jech33.github.io/libonati",
+  "homepage": "https://jech33.github.io/libonati/",
   "name": "libonatis-web-page",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite --host 0.0.0.0",
     "build": "tsc && vite build",
     "preview": "vite preview"
