@@ -16,7 +16,7 @@ const Header = () => {
     <nav className="flex align-middle">
       <ul className="container flex flex-wrap justify-end mx-auto navLinks">
         {links.map((link) => (
-          <li className="navLink p-5"><Link to={link.to}>{link.text}</Link></li>
+          <li className="navLink p-5" key={link.text}><Link to={link.to}>{link.text}</Link></li>
         ))}
       </ul>
       <div className="menuIcon p-5">

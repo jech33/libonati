@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 // import Swiper core and required modules
 import { Navigation, FreeMode, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,11 +12,14 @@ import 'swiper/css/scrollbar';
 
 // Additional imports
 import { CircularProgress } from '@mui/material';
+import { AdvancedImage } from '@cloudinary/react';
 import images from '../../../config/photos.json';
+import { appContext } from '../../../context/contexts';
 
 const SwiperHome = ({ id }:{id:string}) => {
   const slidesCrew = images.crew;
   const [loadingImg, setLoadingImg] = useState(true);
+  const { cld } = useContext(appContext);
 
   return (
     <>
@@ -40,7 +43,7 @@ const SwiperHome = ({ id }:{id:string}) => {
         // onSlideChange={(swiper) => console.log(swiper)}
       >
         { slidesCrew.map((crewMate) => (
-          <SwiperSlide>
+          <SwiperSlide key={crewMate.nickname} onLoad={() => setLoadingImg(false)}>
             <div className="absolute px-20 py-10
           h-screen w-full lg:h-full lg:w-full
           bg-gradient-to-t from-black opacity-90"
@@ -52,12 +55,13 @@ const SwiperHome = ({ id }:{id:string}) => {
               <p className="memberDescription"> </p>
               <h3 className="bg-black bg-opacity-60 w-2/6 py-2 mx-auto">{crewMate.nickname.toUpperCase()}</h3>
             </div>
-            <img
+            <AdvancedImage
+              cldImg={cld.image(crewMate.homePhotoId)}
               className={`object-cover h-full ${loadingImg && 'hidden'}
-                  ${crewMate.id === 4 ? 'object-left' : 'object-center'}`}
-              src={images.link + crewMate.homePhotoId}
-              alt={crewMate.nickname}
-              onLoad={() => setLoadingImg(false)}
+                  ${crewMate.id === 1 && 'object-[65%]'}
+                  ${crewMate.id === 3 && 'object-[50%]'}
+                  ${crewMate.id === 4 && 'object-[12%]'}
+                  ${crewMate.id === 5 && 'object-[25%]'}`}
             />
           </SwiperSlide>
         ))}

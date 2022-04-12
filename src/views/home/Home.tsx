@@ -19,7 +19,7 @@ const Home = () => (
     <div className="mb-36 w-full text-libonatiGold z-10">
 
       {/* Separator on Mobile */}
-      <div className="flex lg:hidden">
+      <div className="flex lg:hidden w-full">
         <div className="w-3/12" />
         <div className="w-6/12 h-[0.25rem] -mt-12">
           <div className="bg-libonatiGold w-full h-full" />
@@ -33,11 +33,29 @@ const Home = () => (
       </section>
     </div>
 
+    {/* Separator on Mobile */}
+    <div className="flex lg:hidden w-full">
+      <div className="w-3/12" />
+      <div className="w-6/12 h-[0.255rem] -mt-12">
+        <div className="bg-libonatiGold w-full h-full" />
+      </div>
+      <div className="w-3/3" />
+    </div>
+
     {/* History and Video */}
     <div className="w-full">
-      <section className="flex flex-col items-center mx-auto mb-36">
+      <section className="flex flex-col items-center mx-auto mb-24 md:mb-36">
         <SectionTwo />
       </section>
+    </div>
+
+    {/* Separator on Mobile */}
+    <div className="flex lg:hidden w-full">
+      <div className="w-3/12" />
+      <div className="w-6/12 h-[0.255rem] -mt-12">
+        <div className="bg-libonatiGold w-full h-full" />
+      </div>
+      <div className="w-3/3" />
     </div>
 
     {/* Shows */}

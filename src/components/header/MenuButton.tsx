@@ -45,7 +45,7 @@ const MenuButton:React.FC<Props> = (props) => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       {navLinks.map((link:any) => (
-        <ul>
+        <ul key={link.text}>
           <li className="navLink p-5"><Link to={link.to}>{link.text}</Link></li>
         </ul>
       ))}

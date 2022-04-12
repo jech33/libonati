@@ -1,8 +1,11 @@
 import React from 'react';
 
 const SectionTwo = () => (
-  <div className="container flex text-center border-libonatiGold">
-    <div className="min-h-[30rem] w-6/12 border-r-4 border-t-4 p-2 border-libonatiGold">
+  <div className="md:container flex flex-col-reverse lg:flex-row text-center border-libonatiGold">
+    <div className="md:p-2
+          w-full h-screen md:h-[30rem] min-h-[30rem] lg:w-6/12
+          lg:border-r-4 lg:border-t-4 lg:border-libonatiGold"
+    >
       <iframe
         width="100%"
         height="100%"
@@ -13,20 +16,22 @@ const SectionTwo = () => (
         allowFullScreen
       />
     </div>
+
     <div className="flex flex-col
-          sm:w-12/12 lg:w-6/12
-          lg:pl-10 p-3 lg:pb-0 pb-8
+          w-full lg:w-6/12
+          lg:pl-10 py-3 lg:pb-0 pb-8
+          px-8 md:px-3
           text-center lg:text-left"
     >
       <h1 className="text-center lg:text-right mb-10 lg:mb-0">
         HISTORY
       </h1>
-      <h2 className="text-libonatiGrayYellow text-right">
+      <h2 className="text-center lg:text-right text-libonatiGrayYellow">
         Vestibulum in facilisis lectus. Praesent sit amet urna pulvinar,
         gravida magna commodo, molestie purus. Cras laoreet vitae risus vel...
       </h2>
       <br />
-      <p className="text-libonatiGrayYellow text-right">
+      <p className="text-center lg:text-right text-libonatiGrayYellow">
         Vestibulum in facilisis lectus. Praesent sit amet urna pulvinar,
         gravida magna commodo, molestie purus. Cras laoreet vitae risus vel
         laoreet. Suspendisse dignissim efficitur urna nec elementum. Duis

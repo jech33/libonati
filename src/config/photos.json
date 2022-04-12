@@ -1,5 +1,5 @@
 {
-  "link": "https://drive.google.com/uc?export=view&id=",
+  "tag": "libonati",
   "crew": [
     {
       "id": 1,
@@ -7,8 +7,8 @@
       "isoDate": "19700110T034846.800-0500",
       "nickname": "Bruno",
       "instrument": "Voice",
-      "homePhotoId": "1_PCvLUuNKGXSONlRS5GtxUBQXIf-GIds",
-      "photosIds": ["1_RI1mOETuTD6Euc_plCbmHLCZZF6EqGs", "1_PCvLUuNKGXSONlRS5GtxUBQXIf-GIds"]
+      "homePhotoId": "libonatis/IMG_7258_yfcmxk",
+      "photosIds": ["libonatis/IMG_7258_yfcmxk"]
     },
     {
       "id": 2,
@@ -16,8 +16,8 @@
       "isoDate": "19700110T034846.800-0500",
       "nickname": "Chris",
       "instrument": "Guitar",
-      "homePhotoId": "1_dlIR81Ccuu1dgWLGeRsOeHqaxccRU7J",
-      "photosIds": ["1_dlIR81Ccuu1dgWLGeRsOeHqaxccRU7J"]
+      "homePhotoId": "libonatis/IMG_7298_rjy7jh",
+      "photosIds": ["libonatis/IMG_7298_rjy7jh, libonatis/IMG_7210_e9rwbl"]
     },
     {
       "id": 3,
@@ -25,8 +25,8 @@
       "isoDate": "19700110T034846.800-0500",
       "nickname": "Javi",
       "instrument": "Bass",
-      "homePhotoId": "1_5AaKCu9trCDwAeKjAddxj_8eKfV8GuI",
-      "photosIds": ["1_5AaKCu9trCDwAeKjAddxj_8eKfV8GuI", "1_hdi5Y8oL1V3LdrUNiCKqCRUus5FDqi4"]
+      "homePhotoId": "libonatis/IMG_7233_o02wbj",
+      "photosIds": ["libonatis/IMG_7233_o02wbj"]
     },
     {
       "id": 4,
@@ -34,8 +34,8 @@
       "isoDate": "19700110T034846.800-0500",
       "nickname": "Jota",
       "instrument": "Keyboards",
-      "homePhotoId": "1_Dg1VdhdrVGp-rRtJPuVGHZPEUb7HIgY",
-      "photosIds": ["1_Dg1VdhdrVGp-rRtJPuVGHZPEUb7HIgY"]
+      "homePhotoId": "libonatis/IMG_7240_rp2ynq",
+      "photosIds": ["libonatis/IMG_7240_rp2ynq"]
     },
     {
       "id": 5,
@@ -43,8 +43,8 @@
       "isoDate": "19700110T034846.800-0500",
       "nickname": "Juank",
       "instrument": "Guitar",
-      "homePhotoId": "1_lf0bUHXkujlmTPLc4bDzwDt2hxFlpxv",
-      "photosIds": ["1_lf0bUHXkujlmTPLc4bDzwDt2hxFlpxv"]
+      "homePhotoId": "libonatis/IMG_7304_zs8xdz",
+      "photosIds": ["libonatis/IMG_7304_zs8xdz"]
     }
   ],
   "photos": [
