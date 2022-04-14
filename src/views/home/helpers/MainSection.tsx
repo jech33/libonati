@@ -1,6 +1,6 @@
 import React from 'react';
 import SwiperHome from './SwiperHome';
-
+// It should have all text on a json file
 const MainSection = () => (
   <>
     <div className="flex flex-col
