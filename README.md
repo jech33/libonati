@@ -81,18 +81,6 @@ All Commit Message Format **MUST** meet this Text Format:
 | `wip`         | for work in progress commit |
 | `chore`       | for other operations commit |
 
-
-If the prefix is the below types, it will appear in the changelog. 
-
-- `new` (`feature`)
-- `bug`
-- `performance`
-- `security`
-- `improvement`
-- `deprecated`
-- `breaking`
-
-
 ### Scope
 The scope could be anything specifying place or category of the commit change. For example $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, feature1, etc...
 
@@ -103,10 +91,6 @@ The subject contains succinct description of the change:
 * use the imperative, present tense: "change" not "changed" nor "changes"
 * don't capitalize first letter
 * no dot (.) at the end
-
-
-### Message Body
-Just as in the **Subject**, use the imperative, present tense: "change" not "changed" nor "changes". The body should include the motivation for the change and contrast this with previous behavior.
 
 ### Revert
 If the commit reverts a previous commit, it should begin with revert:, followed by the header of the reverted commit. In the body it should say: This reverts commit <hash>., where the hash is the SHA of the commit being reverted.
@@ -153,9 +137,6 @@ If the commit reverts a previous commit, it should begin with revert:, followed 
 | :bookmark:                 | `:bookmark:`                 | `release`          | **tagged** with version label |
 | :back:                     | `:back:`                     | `revert`           | **revert** commiting |
 | :construction:             | `:construction:`             | `wip`              | **WIP** commiting |
-
-
-Ask to Be [Creative](http://www.emoji-cheat-sheet.com/)!
 
 
 ### Examples
