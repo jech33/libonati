@@ -47,7 +47,7 @@ $ npm run build
 
 ## Commits agreement
 
-# Commit Message Format
+### Commit Message Format
 All Commit Message Format **MUST** meet this Text Format:
 
 ```
@@ -55,7 +55,7 @@ All Commit Message Format **MUST** meet this Text Format:
 ```
 
 
-# Types
+### Types
 
 | Type          | Description |
 |:-------------:|-------------|
@@ -93,11 +93,11 @@ If the prefix is the below types, it will appear in the changelog.
 - `breaking`
 
 
-# Scope
+### Scope
 The scope could be anything specifying place or category of the commit change. For example $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, feature1, etc...
 
 
-# Subject
+### Subject
 The subject contains succinct description of the change:
 
 * use the imperative, present tense: "change" not "changed" nor "changes"
@@ -105,14 +105,14 @@ The subject contains succinct description of the change:
 * no dot (.) at the end
 
 
-# Message Body
+### Message Body
 Just as in the **Subject**, use the imperative, present tense: "change" not "changed" nor "changes". The body should include the motivation for the change and contrast this with previous behavior.
 
-# Revert
+### Revert
 If the commit reverts a previous commit, it should begin with revert:, followed by the header of the reverted commit. In the body it should say: This reverts commit <hash>., where the hash is the SHA of the commit being reverted.
 
 
-# Emojis
+### Emojis
 
 | Emoji                         | Raw Emoji Code                  | Type               | Description |
 |:-----------------------------:|---------------------------------|--------------------|-------------|
@@ -158,7 +158,7 @@ If the commit reverts a previous commit, it should begin with revert:, followed 
 Ask to Be [Creative](http://www.emoji-cheat-sheet.com/)!
 
 
-# Examples
+### Examples
 
 new:
 ```
