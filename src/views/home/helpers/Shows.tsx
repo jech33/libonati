@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import React, { useEffect, useState } from 'react';
 import shows from '../../../config/shows.json';
 
@@ -9,10 +10,17 @@ interface _show {
 const [showsConverted, setShowsConverted] = useState<any[]>([]);
 
 useEffect(() => {
+  const options = { weekday: 'short', month: 'short', day: 'numeric' };
+  const year = { year: 'numeric' };
   const convert = shows.map((show:_show) => {
     const showDate = new Date(show.date);
-    // eslint-disable-next-line no-param-reassign
     show.date = showDate;
+    return show;
+  });
+  convert.sort((a, b) => b.date - a.date);
+  convert.map((show) => {
+    show.year = show.date.toLocaleDateString('en-US', year);
+    show.date = show.date.toLocaleDateString('en-US', options); // Saturday, September 17, 2016
     return show;
   });
   setShowsConverted(convert);
@@ -37,6 +45,8 @@ return (
           >
             <div className="px-2 md:w-2/12">
               {show.date.toString()}
+              <br />
+              {show.year.toString()}
             </div>
             <div className="px-2 md:w-9/12 text-libonatiWhiteFont">
               {show.venue}
