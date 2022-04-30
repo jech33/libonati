@@ -31,7 +31,7 @@ return (
     <div className="flex flex-col container mx-auto mt-20 px-10 2xl:px-0 items-center">
       <div className="w-full lg:max-w-[70rem]
       flex flex-col items-center
-      py-10 px-10
+      py-10 px-10 mb-20
       bg-libonatiDarkBlack/80 rounded-xl"
       >
         <h1 className="text-libonatiWhiteFont">LIVE SHOWS</h1>
