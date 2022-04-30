@@ -28,7 +28,7 @@ const Home = () => (
       </div>
 
       {/* The Band and Swiper Section */}
-      <section className="md:container mx-auto flex flex-col lg:flex-row">
+      <section className="md:container mx-auto flex flex-col lg:flex-row xl:px-10 2xl:px-0">
         <MainSection />
       </section>
     </div>
@@ -44,7 +44,7 @@ const Home = () => (
 
     {/* History and Video */}
     <div className="w-full">
-      <section className="flex flex-col items-center mx-auto mb-24 md:mb-36">
+      <section className="flex flex-col items-center mx-auto mb-24 md:mb-36 xl:px-10 2xl:px-0">
         <SectionTwo />
       </section>
     </div>
@@ -60,11 +60,13 @@ const Home = () => (
 
     {/* Shows */}
     <div className="w-full">
-      <Shows />
+      <section className="flex flex-col mx-auto w-full">
+        <Shows />
+      </section>
     </div>
 
     {/* Spotify */}
-    <div className="w-full z-10">
+    <div className="w-full z-10 md:hidden">
       <SpotifyWidget />
     </div>
   </div>

@@ -71,8 +71,16 @@
   background-image: url("https://res.cloudinary.com/jech33/image/upload/q_auto/libonatis/Flag-Mockup_irkdre.png");
 
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @media screen and (max-width: 768px) {
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  @media screen and (min-width: 768px) {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
