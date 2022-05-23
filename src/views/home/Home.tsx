@@ -9,8 +9,8 @@ const Home = () => (
   <div className="container-home text-libonatiGold">
 
     {/* Logo */}
-    <div className="fitHeight mt-10 mb-[20vh] md:conatiner">
-      <LogoLibonati height={100} />
+    <div className="fitHeight mt-10 mb-[20vh] md:container h-[70vh]">
+      <LogoLibonati width="100%" />
     </div>
 
     {/* Content */}
