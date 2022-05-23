@@ -8,12 +8,12 @@ const Header = () => {
   const srcLang:any = getDictionary('en');
   const links = [
     { id: 'home', to: '/', text: srcLang?.navBar.home },
-    { id: 'about', to: '/about', text: srcLang?.navBar.about },
+    { id: 'gallery', to: '/gallery', text: srcLang?.navBar.gallery },
     { id: 'contact', to: '/contact', text: srcLang?.navBar.contact },
   ];
 
   return (
-    <nav className="flex align-middle">
+    <nav className="header-container flex align-middle">
       <ul className="container flex flex-wrap justify-end mx-auto navLinks">
         {links.map((link) => (
           <li className="navLink p-5" key={link.text}><Link to={link.to}>{link.text}</Link></li>

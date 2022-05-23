@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 import React, { useEffect, useState } from 'react';
+import SpotifyWidget from '../../../components/spotify/SpotifyWidget';
 import shows from '../../../config/shows.json';
 
 const Shows = () => {
@@ -24,7 +25,7 @@ useEffect(() => {
     return show;
   });
   setShowsConverted(convert);
-}, []);
+}, [shows]);
 
 return (
   <div className="parallax min-h-screen w-full flex flex-col">
@@ -43,20 +44,29 @@ return (
             py-3 px-4
             border-b-[0.065rem] border-libonatiGrayYellow"
           >
-            <div className="px-2 md:w-2/12">
+            <div className="px-2 md:w-3/12 lg:w-2/12">
               {show.date.toString()}
               <br />
               {show.year.toString()}
             </div>
-            <div className="px-2 md:w-9/12 text-libonatiWhiteFont">
+            <div className="px-2 md:w-8/12 lg:w-9/12 text-libonatiWhiteFont">
               {show.venue}
             </div>
-            <div className="px-2 md:w-3/12">
+            <div className="px-2 md:w-3/12 lg:w-3/12">
               {show.location}
             </div>
           </div>
         ))}
       </div>
+
+      {/* Spotify */}
+      <div className="w-full z-10 mx-auto
+        md:mb-20
+        lg:max-w-[70rem]"
+      >
+        <SpotifyWidget />
+      </div>
+
     </div>
   </div>
 );

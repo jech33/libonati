@@ -1,63 +1,63 @@
 [
     {
         "id": 1,
-        "date": "2021-08-27",
+        "date": "2021/08/27",
         "venue": "Caribbean Team",
         "location": "Barranquilla, Colombia",
         "photos": ""
     },
     {
         "id": 2,
-        "date": "2021-09-22",
+        "date": "2021/09/22",
         "venue": "BBC Prado",
         "location": "Barranquilla, Colombia",
         "photos": ""
     },
     {
         "id": 3,
-        "date": "2021-10-15",
+        "date": "2021/10/15",
         "venue": "Casa Meyer - Spooky Vibes",
         "location": "Barranquilla, Colombia",
         "photos": ""
     },
     {
         "id": 4,
-        "date": "2021-10-16",
+        "date": "2021/10/16",
         "venue": "PUB 315 Prado - Bruno's Birthday Bash",
         "location": "Barranquilla, Colombia",
         "photos": ""
     },
     {
         "id": 5,
-        "date": "2021-11-25",
+        "date": "2021/11/25",
         "venue": "El Cielo De Magda - AFROFEST",
         "location": "Barranquilla, Colombia",
         "photos": ""
     },
     {
         "id": 6,
-        "date": "2021-12-19",
+        "date": "2021/12/19",
         "venue": "Bifii La Salle - HEXFEST",
         "location": "Barranquilla, Colombia",
         "photos": ""
     },
     {
         "id": 7,
-        "date": "2022-02-17",
+        "date": "2022/02/17",
         "venue": "Royal School",
         "location": "Barranquilla, Colombia",
         "photos": ""
     },
     {
         "id": 8,
-        "date": "2022-04-22",
+        "date": "2022/04/22",
         "venue": "WeWork - Team Elite",
         "location": "Barranquilla, Colombia",
         "photos": ""
     },
     {
         "id": 9,
-        "date": "2022-04-23",
+        "date": "2022/04/23",
         "venue": "Rock N' Rolla",
         "location": "Barranquilla, Colombia",
         "photos": ""

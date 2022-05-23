@@ -1,0 +1,26 @@
+@import "./variables.scss";
+
+/* width */
+
+html {
+    ::-webkit-scrollbar {
+      width: 0.5rem;
+      
+      /* Track */
+      &-track {
+        background-color: $libonatiGrayYellow;
+        border-radius: 2rem;
+      }
+    
+      /* Handle */
+      &-thumb {
+        background: rgb(65, 64, 64);
+        border-radius: 2rem;
+      }
+    
+      /* Handle on hover */
+      &-thumb:hover {
+        background: $libonatiGold-80;
+      }
+    }
+}

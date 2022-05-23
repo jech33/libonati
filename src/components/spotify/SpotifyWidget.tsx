@@ -4,7 +4,7 @@ import React from 'react';
 const SpotifyWidget = () => (
   <iframe
     title="spotifyWidget"
-    className="rounded-xl"
+    className="md:rounded-xl"
     src="https://open.spotify.com/embed/artist/3BEEyYcSD1WhqrZsidka2I?utm_source=generator&theme=0"
     width="100%"
     height="300"

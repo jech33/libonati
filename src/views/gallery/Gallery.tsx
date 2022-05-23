@@ -1,10 +1,10 @@
 import { Container } from '@mui/material';
 import React from 'react';
 
-const Contact = () => (
+const Gallery = () => (
   <Container maxWidth="xl" className="w-full border-solid border-2 border-libonatiGold grow">
-    Contact
+    hello
   </Container>
 );
 
-export default Contact;
+export default Gallery;
