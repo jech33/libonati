@@ -60,8 +60,7 @@ return (
       </div>
 
       {/* Spotify */}
-      <div className="w-full z-10 mx-auto
-        md:mb-20
+      <div className="w-full z-10 mx-auto mb-20
         lg:max-w-[70rem]"
       >
         <SpotifyWidget />
