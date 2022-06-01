@@ -1,0 +1,9 @@
+@import "../../scss/variables.scss";
+
+.gallery-container {
+    .photo-container {
+        &:hover {
+            outline: solid 1px red;
+        }
+    }
+}

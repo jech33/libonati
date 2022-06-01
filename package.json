@@ -19,6 +19,7 @@
     "@heroicons/react": "^1.0.6",
     "@material-ui/styles": "^4.11.5",
     "@mui/icons-material": "^5.8.2",
+    "@mui/lab": "^5.0.0-alpha.84",
     "@mui/material": "^5.8.2",
     "axios": "^0.26.1",
     "prop-types": "^15.8.1",
