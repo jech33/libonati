@@ -5,7 +5,7 @@ import './layout.scss';
 
 const Layout = ({ content, header = true, footer = true }:
   {content: ReactNode, header: boolean, footer: boolean}) => (
-    <div className="layoutContainer flex flex-col h-[100vh]">
+    <div className="layoutContainer flex flex-col">
       {header && <Header />}
       <div className="flex flex-col content grow">
         { content }

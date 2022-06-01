@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import SpotifyWidget from '../../../components/spotify/SpotifyWidget';
 import shows from '../../../config/shows.json';
 
@@ -10,21 +10,29 @@ interface _show {
 
 const [showsConverted, setShowsConverted] = useState<any[]>([]);
 
+const convertShows = useCallback(
+  () => {
+    const options = { weekday: 'short', month: 'short', day: 'numeric' };
+    const year = { year: 'numeric' };
+    const convert = JSON.parse(JSON.stringify(shows));
+    convert.map((show:_show) => {
+      const showDate = new Date(show.date);
+      show.date = showDate;
+      return show;
+    });
+    convert.sort((a:any, b:any) => b.date - a.date);
+    convert.map((show:any) => {
+      show.year = show.date.toLocaleDateString('en-US', year);
+      show.date = show.date.toLocaleDateString('en-US', options); // Saturday, September 17, 2016
+      return show;
+    });
+    setShowsConverted(convert);
+  },
+  [],
+);
+
 useEffect(() => {
-  const options = { weekday: 'short', month: 'short', day: 'numeric' };
-  const year = { year: 'numeric' };
-  const convert = shows.map((show:_show) => {
-    const showDate = new Date(show.date);
-    show.date = showDate;
-    return show;
-  });
-  convert.sort((a, b) => b.date - a.date);
-  convert.map((show) => {
-    show.year = show.date.toLocaleDateString('en-US', year);
-    show.date = show.date.toLocaleDateString('en-US', options); // Saturday, September 17, 2016
-    return show;
-  });
-  setShowsConverted(convert);
+  convertShows();
 }, [shows]);
 
 return (
