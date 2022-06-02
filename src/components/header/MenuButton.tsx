@@ -55,9 +55,9 @@ const MenuButton:React.FC<Props> = (props) => {
   const anchor = 'right';
 
   return (
-    <div>
+    <div className="w-fit">
       <Button
-        className="menuIcon"
+        className="menuIcon shadow-2xl"
         onClick={toggleDrawer(anchor, true)}
         disableRipple
       >

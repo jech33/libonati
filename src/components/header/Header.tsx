@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MenuButton from './MenuButton';
-import './header.scss';
 import { getDictionary } from './utils/functions';
+import './header.scss';
 
 const Header = () => {
   const srcLang:any = getDictionary('en');
@@ -19,7 +19,7 @@ const Header = () => {
           <Link to={link.to}><li className="navLink p-5" key={link.text}>{link.text}</li></Link>
         ))}
       </ul>
-      <div className="menuIcon p-5">
+      <div className="p-5">
         <MenuButton navLinks={links} />
       </div>
     </nav>
