@@ -1,7 +1,7 @@
 @import "../../scss/variables.scss";
 
 .gallery-container {
-    overflow-x: hidden;
+    overflow: visible;
     .image-hovered {
         z-index: 1;
     }
@@ -9,7 +9,7 @@
         transition: all 0.2s ease;
         z-index: 0;
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
             transition: all 0.2s ease;
             cursor: pointer;
             z-index: 1000;

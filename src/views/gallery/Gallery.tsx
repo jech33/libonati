@@ -49,6 +49,7 @@ const Gallery = React.memo(() => {
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}
         style={{ height: data.displayHeight }}
+        onLoad={() => console.log(`Loaded ${data.public_id}`)}
       >
         <AdvancedImage
           cldImg={image}
