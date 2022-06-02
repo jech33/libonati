@@ -1,9 +1,22 @@
 @import "../../scss/variables.scss";
 
 .gallery-container {
+    overflow-x: hidden;
+    .image-hovered {
+        z-index: 1;
+    }
     .photo-container {
+        transition: all 0.2s ease;
+        z-index: 0;
         &:hover {
-            outline: solid 1px red;
+            transform: scale(1.2);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .advanced-image {
+            image-rendering: optimizeSpeed;
+            object-fit: cover;
         }
     }
 }

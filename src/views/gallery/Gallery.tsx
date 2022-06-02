@@ -1,7 +1,11 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 import { AdvancedImage } from '@cloudinary/react';
-import { Box, Container } from '@mui/material';
-import { Masonry } from '@mui/lab';
+import { Container } from '@mui/material';
+import { Masonry } from 'masonic';
+import { thumbnail } from '@cloudinary/url-gen/actions/resize';
 
 import { appContext } from '../../context/contexts';
 import usePhotos from '../../common/hooks/usePhotos';
@@ -25,6 +29,35 @@ const Gallery = React.memo(() => {
     setAllPhotos(images);
   }, []);
 
+  const handleMouseOver = (event: React.MouseEvent<Element, MouseEvent>) => {
+    const target = event.target as HTMLDivElement;
+    const element = target?.parentNode!.parentNode as HTMLElement;
+    element.classList!.add('image-hovered');
+  };
+  const handleMouseLeave = (event: React.MouseEvent<Element, MouseEvent>) => {
+    const target = event.target as HTMLDivElement;
+    const element = target?.parentNode!.parentNode as HTMLElement;
+    element.classList!.remove('image-hovered');
+  };
+
+  const masonryCard = ({ data }: {data: any}) => {
+    const image = cld.image(data.public_id);
+    image.resize(thumbnail().width(1920).height(1080));
+    return (
+      <div
+        className="photo-container overflow-hidden rounded-md"
+        onMouseOver={handleMouseOver}
+        onMouseLeave={handleMouseLeave}
+        style={{ height: data.displayHeight }}
+      >
+        <AdvancedImage
+          cldImg={image}
+          className="advanced-image h-full w-full"
+        />
+      </div>
+    );
+  };
+
   useEffect(() => {
     getPhotos();
   }, []);
@@ -33,21 +66,19 @@ const Gallery = React.memo(() => {
 
   return (
     <Container maxWidth="xl" className="gallery-container w-full grow flex align-items-center">
-      <Masonry columns={{ xs: 2, sm: 3, md: 4 }} spacing={2} sx={{ margin: '0' }}>
-        {allPhotos?.map((photo:any) => (
-          <Box
-            key={photo.public_id}
-            style={{ height: photo.displayHeight }}
-            className="photo-container overflow-hidden rounded-md"
-            onClick={() => console.log(photo.public_id)}
-          >
-            <AdvancedImage
-              cldImg={cld.image(photo.public_id)}
-              className="advanced-image object-cover object-center h-full w-full"
-            />
-          </Box>
-        ))}
-      </Masonry>
+      <Masonry
+          // Provides the data for our grid items
+        items={allPhotos}
+        itemHeightEstimate={300}
+          // Adds 8px of space between the grid cells
+        columnGutter={12}
+          // Sets the minimum column width to 172px
+        columnWidth={250}
+          // Pre-renders 5 windows worth of content
+        overscanBy={5}
+          // This is the grid item component
+        render={masonryCard}
+      />
     </Container>
   );
 });
