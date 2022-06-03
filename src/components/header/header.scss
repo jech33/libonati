@@ -5,7 +5,13 @@ nav {
   top: 0;
   z-index: 100;
   font-family: "Montserrat" !important;
-  // background: linear-gradient(to right, black, $libonatiDarkBlack);
+  &.header-container {
+    background: linear-gradient(to right, rgb(0, 0, 0, 0.9), rgb(42, 42, 42, 0.9));
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  
   .navLink {
     transition: all 0.3s ease;
     font-weight: 600;
@@ -14,12 +20,25 @@ nav {
       color: $libonatiGold-20;
     }
   }
-
+  
   .menuIcon {
+    &.MuiButton-root {
+      padding: 1.1rem 0rem;
+    }
     display: none;
+    width: fit-content !important;
+    background-color: black;
     color: $libonatiGold;
+    border-radius: 50%;
+    margin: 0;
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: 0 0 40px 1px rgba(56, 56, 56, 0.4);
+    &:hover {
+      background-color: black;
+    }
   }
-
+  
   .MuiButton-root {
     padding: 0;
     font-family: "Montserrat";
@@ -32,7 +51,7 @@ nav {
 
   @media only screen and (max-width: 640px) {
     .menuIcon {
-      display: block;
+      display: flex;
     }
     .navLink {
       display: none;

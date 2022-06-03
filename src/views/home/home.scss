@@ -9,7 +9,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100%;
 
   .logoLibonati {
     filter: invert(53%) sepia(95%) saturate(254%) hue-rotate(359deg)
@@ -41,11 +40,12 @@
 
   .fitHeight {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    height: 100vh;
-    position: absolute;
-    top: 0;
+    position: relative;
+    height: 70vh;
+    max-height: 70vh;
+    max-width: 100%;
   }
 
   .sliderHome {
@@ -71,8 +71,16 @@
   background-image: url("https://res.cloudinary.com/jech33/image/upload/q_auto/libonatis/Flag-Mockup_irkdre.png");
 
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @media screen and (max-width: 768px) {
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  @media screen and (min-width: 768px) {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

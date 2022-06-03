@@ -2,16 +2,18 @@ import React from 'react';
 
 interface Props {
   className?: string;
-  height?: number;
+  height?: string;
+  width?: string;
 }
 
 const LogoLibonati: React.FC<Props> = (props) => {
-  const { className, height } = props;
+  const { className, height, width } = props;
   return (
     <svg
       {...props}
       className={`logoLibonati ${className}`}
-      height={`${height}%`}
+      height={`${height}`}
+      width={`${width}`}
       viewBox="0 0 456 835"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +71,6 @@ const LogoLibonati: React.FC<Props> = (props) => {
   );
 };
 
-LogoLibonati.defaultProps = { className: 'logoLibonati', height: 100 };
+LogoLibonati.defaultProps = { className: 'logoLibonati', height: '70vh', width: '20vw' };
 
 export default LogoLibonati;

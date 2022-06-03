@@ -1,10 +1,4 @@
-import axios from 'axios';
-
-export const getCloudinaryPhotos = async (tag:string) => {
-  const results = await axios.get(`https://res.cloudinary.com/jech33/image/list/${tag}.json`);
-  return results;
-};
-
+/* eslint-disable import/prefer-default-export */
 export const testFunction = () => {
   // Test
 };

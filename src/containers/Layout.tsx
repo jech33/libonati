@@ -7,7 +7,7 @@ const Layout = ({ content, header = true, footer = true }:
   {content: ReactNode, header: boolean, footer: boolean}) => (
     <div className="layoutContainer flex flex-col">
       {header && <Header />}
-      <div className="content grow">
+      <div className="flex flex-col content grow">
         { content }
         {footer && <Footer />}
       </div>
