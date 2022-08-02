@@ -4,14 +4,14 @@ import Layout from '../containers/Layout';
 import Gallery from '../views/gallery/Gallery';
 import Contact from '../views/contact/Contact';
 import Home from '../views/home/Home';
+import Landing from '../views/landing/Landing';
 
 const routes = [
-  /* Home */
   { path: '/', name: 'Home', component: <Layout content={<Home />} header footer /> },
-  /* About */
   { path: '/gallery', name: 'gallery', component: <Layout content={<Gallery />} header footer /> },
-  /* Contact */
   { path: '/contact', name: 'Contact', component: <Layout content={<Contact />} header footer /> },
+  { path: '/*', name: 'Landing', component: <Layout content={<Landing />} header={false} footer /> },
+
 ];
 
 export default routes;
